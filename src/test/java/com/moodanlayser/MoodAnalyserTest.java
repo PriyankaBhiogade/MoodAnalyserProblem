@@ -55,4 +55,13 @@ public class MoodAnalyserTest {
         Assert.assertEquals(new MoodAnalyser("I am in the happy mood"), realMoodAnalyser);
     }
 
+    @Test
+    public void givenClassName_whenNoSuchClass_ReturnMoodAnalyserException() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser("aaaa");
+        try {
+            moodAnalyser.analyserMood();
+        }catch (MoodAnalyserException e){
+            Assert.assertEquals(MoodAnalyserException.ExceptionType.NO_SUCH_CLASS,e.type);
+        }
+    }
 }

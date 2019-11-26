@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-26T08:50:40" hostname="admin1-desktop" time="0.001">
+<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-26T09:38:25" hostname="admin1-desktop" time="0.0">
   <properties/>
-  <testcase name="givenMoodAnalyseClass_WhenProper1_ReturnObject" classname="com.moodanlayser.MoodAnalyserTest" time="0.001"/>
+  <testcase name="givenClassName_whenNoSuchClass_ReturnMoodAnalyserException" classname="com.moodanlayser.MoodAnalyserTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
