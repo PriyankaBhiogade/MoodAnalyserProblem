@@ -21,14 +21,14 @@ public class MoodAnalyserTest {
     }
 
     @Test
-    public void givenMessage_WhenNull_ShouldReturnHappy() throws MoodAnalyserException {
+    public void givenNull_WhenProper_ShouldReturnHappy() throws MoodAnalyserException {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         String mood = moodAnalyser.analyserMood();
         Assert.assertEquals("HAPPY",mood);
     }
 
     @Test
-    public void givenMessage_WhenNullWithCustomException_ShouldReturnMoodAnalyserException() {
+    public void givenNull_WhenNullWithCustomException_ShouldReturnMoodAnalyserException() {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         try {
             ExpectedException exceptionRule = ExpectedException.none();
@@ -40,7 +40,7 @@ public class MoodAnalyserTest {
     }
 
     @Test
-    public void givenMessage_WhenEmptyMood_ShouldReturnMoodAnalyserException() {
+    public void givenEmpty_WhenENTERED_EMPTY_ShouldReturnMoodAnalyserException() {
         MoodAnalyser moodAnalyser = new MoodAnalyser("");
         try {
              moodAnalyser.analyserMood();
@@ -50,8 +50,9 @@ public class MoodAnalyserTest {
     }
 
     @Test
-    public void givenMoodAnalyseClass_WhenProper1_ReturnObject() throws MoodAnalyserException {
+    public void givenMoodAnalyseClass_WhenProper_ReturnObject() throws MoodAnalyserException {
         MoodAnalyser realMoodAnalyser = MoodAnalyserFactory.createMoodAnalyser("I am in the happy mood");
         Assert.assertEquals(new MoodAnalyser("I am in the happy mood"), realMoodAnalyser);
     }
+
 }
