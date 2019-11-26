@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-11-26T06:20:14" hostname="admin1-desktop" time="0.002">
+<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-26T06:53:43" hostname="admin1-desktop" time="0.004">
   <properties/>
-  <testcase name="givenMessage_WhenSad_ShouldReturnSad" classname="com.moodanlayser.MoodAnalyserTest" time="0.001"/>
-  <testcase name="givenMessage_WhenAnyMood_ShouldReturnHappy" classname="com.moodanlayser.MoodAnalyserTest" time="0.001"/>
-  <testcase name="givenMessage_WhenNull_ShouldReturnHappy" classname="com.moodanlayser.MoodAnalyserTest" time="0.0"/>
+  <testcase name="givenMessage_WhenNullWithCustomException_ShouldReturnHappy" classname="com.moodanlayser.MoodAnalyserTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -2,27 +2,40 @@ package com.moodanlayser;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 public class MoodAnalyserTest {
 
     @Test
-    public void givenMessage_WhenSad_ShouldReturnSad() {
+    public void givenMessage_WhenSad_ShouldReturnSad() throws MoodAnalyserException {
         MoodAnalyser moodAnalyser = new MoodAnalyser("I Am In Sad Mood");
         String mood = moodAnalyser.analyserMood();
         Assert.assertEquals("SAD",mood);
     }
 
     @Test
-    public void givenMessage_WhenAnyMood_ShouldReturnHappy() {
+    public void givenMessage_WhenAnyMood_ShouldReturnHappy() throws MoodAnalyserException {
         MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
         String mood = moodAnalyser.analyserMood();
         Assert.assertEquals("HAPPY",mood);
     }
 
     @Test
-    public void givenMessage_WhenNull_ShouldReturnHappy() {
+    public void givenMessage_WhenNull_ShouldReturnHappy() throws MoodAnalyserException {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         String mood = moodAnalyser.analyserMood();
         Assert.assertEquals("HAPPY",mood);
+    }
+
+    @Test
+    public void givenMessage_WhenNullWithCustomException_ShouldReturnHappy() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        try {
+            ExpectedException exceptionRule = ExpectedException.none();
+            exceptionRule.expect(MoodAnalyserException.class);
+            moodAnalyser.analyserMood();
+        }catch (MoodAnalyserException e){
+            Assert.assertEquals("Please Enter proper Mood",e.getMessage());
+        }
     }
 }
