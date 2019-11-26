@@ -13,13 +13,19 @@ public class MoodAnalyser {
     public String analyserMood() throws MoodAnalyserException {
         try {
             if(message.length() == 0)
-                throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY,"Please Enter Proper Mood");
+                throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY,"please Enter Proper Mood");
             if (message.contains("Sad"))
                 return "SAD";
             else
                 return "HAPPY";
         } catch (NullPointerException e) {
-            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"Please Enter Proper Mood");
+            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"please Enter Proper Mood");
         }
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if(this.message.equals(((MoodAnalyser) obj).message))
+            return true;
+        return false;
     }
 }

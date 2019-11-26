@@ -35,7 +35,7 @@ public class MoodAnalyserTest {
             exceptionRule.expect(MoodAnalyserException.class);
             moodAnalyser.analyserMood();
         }catch (MoodAnalyserException e){
-            Assert.assertEquals("Please Enter proper Mood",e.getMessage());
+            Assert.assertEquals("please Enter proper Mood",e.getMessage());
         }
     }
 
@@ -47,5 +47,11 @@ public class MoodAnalyserTest {
         }catch (MoodAnalyserException e){
             Assert.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_EMPTY,e.type);
         }
+    }
+
+    @Test
+    public void givenMoodAnalyseClass_WhenProper1_ReturnObject() throws MoodAnalyserException {
+        MoodAnalyser realMoodAnalyser = MoodAnalyserFactory.createMoodAnalyser("I am in the happy mood");
+        Assert.assertEquals(new MoodAnalyser("I am in the happy mood"), realMoodAnalyser);
     }
 }
