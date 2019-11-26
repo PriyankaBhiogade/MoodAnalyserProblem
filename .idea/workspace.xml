@@ -7,9 +7,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/moodanlayser/MoodAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/moodanlayser/MoodAnalyserTest.class" afterDir="false" />
@@ -67,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MoodAnalyserTest.givenMessage_WhenSad_ShouldReturnSad">
+  <component name="RunManager" selected="Gradle.MoodAnalyserTest.givenMessage_WhenAnyMood_ShouldReturnHappy">
     <configuration name="MoodAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -150,10 +148,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MoodAnalyserTest.givenMessage_WhenAnyMood_ShouldReturnHappy" />
+        <item itemvalue="Gradle.MoodAnalyserTest" />
         <item itemvalue="Gradle.MoodAnalyserTest.givenMessage_WhenSad_ShouldReturnSad" />
         <item itemvalue="Gradle.MoodAnalyserTest.givenMessage_WhenSad_ReturnSad" />
-        <item itemvalue="Gradle.MoodAnalyserTest" />
-        <item itemvalue="Gradle.MoodAnalyserTest.givenMessage_WhenAnyMood_ShouldReturnHappy" />
       </list>
     </recent_temporary>
   </component>
