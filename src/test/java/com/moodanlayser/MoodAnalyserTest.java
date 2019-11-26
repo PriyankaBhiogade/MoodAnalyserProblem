@@ -28,7 +28,7 @@ public class MoodAnalyserTest {
     }
 
     @Test
-    public void givenMessage_WhenNullWithCustomException_ShouldReturnHappy() {
+    public void givenMessage_WhenNullWithCustomException_ShouldReturnMoodAnalyserException() {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         try {
             ExpectedException exceptionRule = ExpectedException.none();
@@ -36,6 +36,16 @@ public class MoodAnalyserTest {
             moodAnalyser.analyserMood();
         }catch (MoodAnalyserException e){
             Assert.assertEquals("Please Enter proper Mood",e.getMessage());
+        }
+    }
+
+    @Test
+    public void givenMessage_WhenEmptyMood_ShouldReturnMoodAnalyserException() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser("");
+        try {
+             moodAnalyser.analyserMood();
+        }catch (MoodAnalyserException e){
+            Assert.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_EMPTY,e.type);
         }
     }
 }
