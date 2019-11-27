@@ -87,4 +87,14 @@ public class MoodAnalyserTest {
         MoodAnalyser MoodAnalyser = MoodAnalyserFactory.createMoodAnalyser();
         Assert.assertEquals(new MoodAnalyser("I am in Happy Mood"), MoodAnalyser);
     }
+    @Test
+    public void givenClassNameWithPara_whenNoSuchClass_ReturnMoodAnalyserException() {
+        MoodAnalyser moodAnalyser = null;
+        try {
+            MoodAnalyser MoodAnalyser = MoodAnalyserFactory.createMoodAnalyser("I am in Happy Mood");
+        }catch (MoodAnalyserException e){
+            Assert.assertEquals(MoodAnalyserException.ExceptionType.NO_SUCH_CLASS,e.type);
+        }
+    }
+
 }
