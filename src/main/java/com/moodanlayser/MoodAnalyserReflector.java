@@ -48,7 +48,7 @@ public class MoodAnalyserReflector {
             return moodAnalyserObject.getClass().getMethod(methodName).invoke(moodAnalyserObject);
         }catch (NoSuchMethodException e) {
             throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_METHOD,
-                                                "Define Proper message");
+                                                "Define Proper method Name");
         } catch (IllegalAccessException e) {
             throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.No_ACCESS,e.getMessage());
         } catch ( InvocationTargetException e) {

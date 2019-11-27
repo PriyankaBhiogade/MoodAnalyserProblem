@@ -116,6 +116,16 @@ public class MoodAnalyserTest {
         } catch (MoodAnalyserException e) {
             e.printStackTrace();
         }
+    }
 
+    @Test
+    public void givenMessage_WithReflectionWhenImproper_ReturnMoodAnalysisException() {
+        try {
+            MoodAnalyser myObject = MoodAnalyserReflector.createMoodAnalyser("I am in Happy Mood");
+            Object mood = MoodAnalyserReflector.invokeMethod(myObject,"analyserMood1234");
+            Assert.assertEquals("HAPPY",mood);
+        } catch (MoodAnalyserException e) {
+            e.printStackTrace();
+        }
     }
 }
