@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-27T10:52:59" hostname="admin1-desktop" time="0.008">
+<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-27T10:54:05" hostname="admin1-desktop" time="0.007">
   <properties/>
-  <testcase name="givenHappyMessage_withReflectorWhenFieldIsNull_ReturnHappy" classname="com.moodanlayser.MoodAnalyserTest" time="0.008"/>
+  <testcase name="givenHappyMessage_withReflectorWhenFieldIsNull_ReturnHappy" classname="com.moodanlayser.MoodAnalyserTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[com.moodanlayser.MoodAnalyserException: please Enter Proper Field
 	at com.moodanlayser.MoodAnalyserReflector.setFieldValue(MoodAnalyserReflector.java:73)
