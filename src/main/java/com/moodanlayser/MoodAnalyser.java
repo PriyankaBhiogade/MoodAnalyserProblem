@@ -13,13 +13,13 @@ public class MoodAnalyser {
     public String analyserMood() throws MoodAnalyserException {
         try {
             if(message.length() == 0)
-                throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY,"please Enter Proper Mood");
+                throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY,"please Enter proper Mood");
             if (message.contains("Sad"))
                 return "SAD";
             else
                 return "HAPPY";
         } catch (NullPointerException e) {
-            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"please Enter Proper Mood");
+            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"please Enter proper Mood");
         }
     }
 
@@ -29,4 +29,4 @@ public class MoodAnalyser {
             return true;
         return false;
     }
-}
+    }

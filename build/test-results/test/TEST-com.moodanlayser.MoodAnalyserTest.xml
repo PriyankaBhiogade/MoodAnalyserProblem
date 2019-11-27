@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-27T10:54:05" hostname="admin1-desktop" time="0.007">
+<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-11-27T13:01:07" hostname="admin1-desktop" time="0.002">
   <properties/>
-  <testcase name="givenHappyMessage_withReflectorWhenFieldIsNull_ReturnHappy" classname="com.moodanlayser.MoodAnalyserTest" time="0.007"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[com.moodanlayser.MoodAnalyserException: please Enter Proper Field
-	at com.moodanlayser.MoodAnalyserReflector.setFieldValue(MoodAnalyserReflector.java:73)
-	at com.moodanlayser.MoodAnalyserTest.givenHappyMessage_withReflectorWhenFieldIsNull_ReturnHappy(MoodAnalyserTest.java:157)
+  <testcase name="givenMoodAnalyseClassWithPara_WhenProper_ReturnObject" classname="com.moodanlayser.MoodAnalyserTest" time="0.002">
+    <failure message="java.lang.IllegalArgumentException: wrong number of arguments" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: wrong number of arguments
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.moodanlayser.MoodAnalyserReflector.creatMoodAnalyser(MoodAnalyserReflector.java:21)
+	at com.moodanlayser.MoodAnalyserTest.givenMoodAnalyseClassWithPara_WhenProper_ReturnObject(MoodAnalyserTest.java:91)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,5 +56,8 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-]]></system-err>
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

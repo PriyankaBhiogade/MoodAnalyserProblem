@@ -5,44 +5,25 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
 public class MoodAnalyserReflector {
-    public static MoodAnalyser createMoodAnalyser() throws MoodAnalyserException {
+    public static Constructor<?> getConstructor(Class<?>... param) throws MoodAnalyserException {
         try {
             Class<?> moodAnalyserClass = Class.forName("com.moodanlayser.MoodAnalyser");
-            Constructor<?> moodConstructor = moodAnalyserClass.getConstructor();
-            Object moodObject = moodConstructor.newInstance();
-            return (MoodAnalyser) moodObject;
-        }catch (ClassNotFoundException e) {
-            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_CLASS,"please Enter Proper Class Name");
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
+            return moodAnalyserClass.getConstructor(param);
+        } catch (ClassNotFoundException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_CLASS, "Class Not Found");
         } catch (NoSuchMethodException e) {
-            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_METHOD,"please Enter Proper Method Name");
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_METHOD, "Method Not Found");
         }
-        return null;
     }
 
-    public static MoodAnalyser createMoodAnalyser(String message) throws MoodAnalyserException {
+    public static Object creatMoodAnalyser(Constructor<?> constructor, Object ... message ) throws MoodAnalyserException {
         try {
-            Class<?> moodAnalyserClass = Class.forName("com.moodanlayser.MoodAnalyser");
-            Constructor<?> moodConstructor = moodAnalyserClass.getConstructor(String.class);
-            Object moodObject = moodConstructor.newInstance(message);
-            return (MoodAnalyser) moodObject;
-        }catch (ClassNotFoundException e) {
-            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_CLASS,"please Enter Proper Class Name");
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_METHOD,"please Enter Proper Method Name");
+            return constructor.newInstance(message);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_ACCESS, "Method Not Found");
+        } catch (InstantiationException | InvocationTargetException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.OBJECT_CREATION_ISSUE, "Method Not Found");
         }
-        return null;
     }
 
     public static Object invokeMethod(Object moodAnalyserObject,String methodName) throws  MoodAnalyserException {
@@ -73,4 +54,5 @@ public class MoodAnalyserReflector {
             throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"please Enter Proper Field");
         }
     }
+
 }
