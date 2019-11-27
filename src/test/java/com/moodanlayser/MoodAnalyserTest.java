@@ -139,4 +139,15 @@ public class MoodAnalyserTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenHappyMessage_withReflectorWhenImproperFiled_ReturnHappy() {
+        try {
+            Object myObject = MoodAnalyserReflector.createMoodAnalyser("");
+            MoodAnalyserReflector.setFieldValue (myObject,"message123","I am in Happy Mood");
+        } catch (MoodAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
