@@ -69,6 +69,8 @@ public class MoodAnalyserReflector {
                     "Define proper Field Name");
         }catch (IllegalAccessException e) {
             throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.No_ACCESS,e.getMessage());
+        }catch (NullPointerException e){
+            throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"please Enter Proper Field");
         }
     }
 }

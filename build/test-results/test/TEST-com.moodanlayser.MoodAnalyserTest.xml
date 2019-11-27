@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-27T10:48:53" hostname="admin1-desktop" time="0.009">
+<testsuite name="com.moodanlayser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-27T10:52:59" hostname="admin1-desktop" time="0.008">
   <properties/>
-  <testcase name="givenHappyMessage_withReflectorWhenImproperFiled_ReturnHappy" classname="com.moodanlayser.MoodAnalyserTest" time="0.009"/>
+  <testcase name="givenHappyMessage_withReflectorWhenFieldIsNull_ReturnHappy" classname="com.moodanlayser.MoodAnalyserTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[com.moodanlayser.MoodAnalyserException: Define proper Field Name
-	at com.moodanlayser.MoodAnalyserReflector.setFieldValue(MoodAnalyserReflector.java:68)
-	at com.moodanlayser.MoodAnalyserTest.givenHappyMessage_withReflectorWhenImproperFiled_ReturnHappy(MoodAnalyserTest.java:147)
+  <system-err><![CDATA[com.moodanlayser.MoodAnalyserException: please Enter Proper Field
+	at com.moodanlayser.MoodAnalyserReflector.setFieldValue(MoodAnalyserReflector.java:73)
+	at com.moodanlayser.MoodAnalyserTest.givenHappyMessage_withReflectorWhenFieldIsNull_ReturnHappy(MoodAnalyserTest.java:157)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

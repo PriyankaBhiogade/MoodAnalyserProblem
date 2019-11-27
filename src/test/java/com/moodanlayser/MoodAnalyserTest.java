@@ -150,4 +150,13 @@ public class MoodAnalyserTest {
         }
     }
 
+    @Test
+    public void givenHappyMessage_withReflectorWhenFieldIsNull_ReturnHappy() {
+        try {
+            Object myObject = MoodAnalyserReflector.createMoodAnalyser("");
+            MoodAnalyserReflector.setFieldValue (myObject,null,"I am in Happy Mood");
+        } catch (MoodAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 }
