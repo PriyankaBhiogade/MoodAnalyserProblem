@@ -42,4 +42,18 @@ public class MoodAnalyserReflector {
         }
         return null;
     }
+
+    public static Object invokeMethod(Object moodAnalyserObject,String methodName) throws  MoodAnalyserException {
+        try {
+            return moodAnalyserObject.getClass().getMethod(methodName).invoke(moodAnalyserObject);
+        }catch (NoSuchMethodException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_METHOD,
+                                                "Define Proper message");
+        } catch (IllegalAccessException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.No_ACCESS,e.getMessage());
+        } catch ( InvocationTargetException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.METHOD_INVOCATION_ISSUE,
+                                            "May be issue with Data entered");
+        }
+    }
 }

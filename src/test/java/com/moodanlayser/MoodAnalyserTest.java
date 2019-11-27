@@ -106,4 +106,16 @@ public class MoodAnalyserTest {
         }
     }
 
+    //UC6
+    @Test
+    public void givenMessage_WithReflectionWhenProper_ReturnHappy() {
+        try {
+            MoodAnalyser myObject = MoodAnalyserReflector.createMoodAnalyser("I am in Happy Mood");
+            Object mood = MoodAnalyserReflector.invokeMethod(myObject,"analyserMood");
+            Assert.assertEquals("HAPPY",mood);
+        } catch (MoodAnalyserException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
