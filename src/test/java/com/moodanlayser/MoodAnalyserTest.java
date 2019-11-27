@@ -128,4 +128,15 @@ public class MoodAnalyserTest {
             e.printStackTrace();
         }
     }
+
+    //UC7
+    @Test
+    public void givenHappyMessage_withReflectorChangeMoodDynamically_ReturnHappy() {
+        try {
+            Object myObject = MoodAnalyserReflector.createMoodAnalyser("");
+            MoodAnalyserReflector.setFieldValue (myObject,"message","I am in Happy Mood");
+        } catch (MoodAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 }
