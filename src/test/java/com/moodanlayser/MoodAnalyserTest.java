@@ -4,8 +4,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.lang.reflect.Method;
+
 public class MoodAnalyserTest {
 
+    //UC1
     @Test
     public void givenMessage_WhenSad_ShouldReturnSad() throws MoodAnalyserException {
         MoodAnalyser moodAnalyser = new MoodAnalyser("I Am In Sad Mood");
@@ -20,6 +23,7 @@ public class MoodAnalyserTest {
         Assert.assertEquals("HAPPY",mood);
     }
 
+    //UC2
     @Test
     public void givenNull_WhenProper_ShouldReturnHappy() throws MoodAnalyserException {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
@@ -27,6 +31,7 @@ public class MoodAnalyserTest {
         Assert.assertEquals("HAPPY",mood);
     }
 
+    //UC3
     @Test
     public void givenNull_WhenNullWithCustomException_ShouldReturnMoodAnalyserException() {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
@@ -49,6 +54,7 @@ public class MoodAnalyserTest {
         }
     }
 
+    //UC4
     @Test
     public void givenMoodAnalyseClass_WhenProper_ReturnObject() throws MoodAnalyserException {
         MoodAnalyser MoodAnalyser = MoodAnalyserFactory.createMoodAnalyser();
@@ -73,5 +79,12 @@ public class MoodAnalyserTest {
         }catch (MoodAnalyserException e){
             Assert.assertEquals(MoodAnalyserException.ExceptionType.NO_SUCH_METHOD,e.type);
         }
+    }
+
+    //UC5
+    @Test
+    public void givenMoodAnalyseClassWithPara_WhenProper_ReturnObject() throws MoodAnalyserException {
+        MoodAnalyser MoodAnalyser = MoodAnalyserFactory.createMoodAnalyser();
+        Assert.assertEquals(new MoodAnalyser("I am in Happy Mood"), MoodAnalyser);
     }
 }

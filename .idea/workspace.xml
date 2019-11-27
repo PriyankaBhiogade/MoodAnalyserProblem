@@ -3,6 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8e0f344f-ea68-41a1-ac2e-c60956128892" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/moodanlayser/MoodAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/moodanlayser/MoodAnalyser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/moodanlayser/MoodAnalyserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/moodanlayser/MoodAnalyserFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/moodanlayser/MoodAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/moodanlayser/MoodAnalyserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.moodanlayser.MoodAnalyserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.moodanlayser.MoodAnalyserTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.moodanlayser.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.moodanlayser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.moodanlayser.MoodAnalyserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.moodanlayser.MoodAnalyserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/moodanlayser/MoodAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moodanlayser/MoodAnalyser.java" afterDir="false" />
+>>>>>>> master
       <change beforePath="$PROJECT_DIR$/src/main/java/com/moodanlayser/MoodAnalyserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/moodanlayser/MoodAnalyserFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/moodanlayser/MoodAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/moodanlayser/MoodAnalyserTest.java" afterDir="false" />
     </list>
@@ -84,12 +96,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MoodAnalyserTest.givenMessage_WhenEmptyMood_ShouldReturnMoodAnalyserException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MoodAnalyserTest.givenEmpty_WhenENTERED_EMPTY_ShouldReturnMoodAnalyserException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.moodanlayser.MoodAnalyserTest.givenMessage_WhenEmptyMood_ShouldReturnMoodAnalyserException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.moodanlayser.MoodAnalyserTest.givenEmpty_WhenENTERED_EMPTY_ShouldReturnMoodAnalyserException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -124,26 +136,6 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MoodAnalyserTest.givenMoodAnalyseClass_WhenProper1_ReturnObject" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.moodanlayser.MoodAnalyserTest.givenMoodAnalyseClass_WhenProper1_ReturnObject&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="MoodAnalyserTest.givenMoodAnalyseClass_WhenProper_ReturnObject" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -164,13 +156,33 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MoodAnalyserTest.givenNull_WhenProper_ShouldReturnHappy" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.moodanlayser.MoodAnalyserTest.givenNull_WhenProper_ShouldReturnHappy&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.MoodAnalyserTest.givenMethod_whenNotProper_ReturnMoodAnalyserException" />
         <item itemvalue="Gradle.MoodAnalyserTest.givenClassName_whenNoSuchClass_ReturnMoodAnalyserException" />
         <item itemvalue="Gradle.MoodAnalyserTest.givenMoodAnalyseClass_WhenProper_ReturnObject" />
-        <item itemvalue="Gradle.MoodAnalyserTest.givenMoodAnalyseClass_WhenProper1_ReturnObject" />
-        <item itemvalue="Gradle.MoodAnalyserTest.givenMessage_WhenEmptyMood_ShouldReturnMoodAnalyserException" />
+        <item itemvalue="Gradle.MoodAnalyserTest.givenEmpty_WhenENTERED_EMPTY_ShouldReturnMoodAnalyserException" />
+        <item itemvalue="Gradle.MoodAnalyserTest.givenNull_WhenProper_ShouldReturnHappy" />
       </list>
     </recent_temporary>
   </component>

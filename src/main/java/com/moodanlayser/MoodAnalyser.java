@@ -22,9 +22,15 @@ public class MoodAnalyser {
             throw new  MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"please Enter Proper Mood");
         }
     }
+//    @Override
+//    public boolean equals1(Object obj) {
+//        if(this.message.equals(((MoodAnalyser) obj).message))
+//            return true;
+//        return false;
+//    }
     @Override
     public boolean equals(Object obj) {
-        if(this.message.equals(((MoodAnalyser) obj).message))
+        if(obj instanceof MoodAnalyser)
             return true;
         return false;
     }
